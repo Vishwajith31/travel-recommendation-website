@@ -412,3 +412,7 @@ ul li a:hover {
     width: 100%; /* Make visit button width 100% */
   }
 }
+.localTime {
+  color: white;
+  padding-bottom: 10px;
+}

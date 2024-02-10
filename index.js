@@ -59,6 +59,39 @@ document.addEventListener('DOMContentLoaded', function () {
       const element = document.createElement('div');
       element.classList.add('recommendation');
 
+      // let timeZone = '';
+      // jsonData.countries.forEach(country => {
+      //   country.cities.forEach(city => {
+      //     if (city.name === recommendation.name) {
+      //       timeZone = country.timeZone;
+      //     }
+      //   });
+      // });
+      // jsonData.beaches.forEach(beach => {
+      //   if (beach.name === recommendation.name) {
+      //     timeZone = beach.timeZone;
+      //   }
+      // });
+      // jsonData.temples.forEach(temple => {
+      //   if (temple.name === recommendation.name) {
+      //     timeZone = temple.timeZone;
+      //   }
+      // });
+      const timeZone = recommendation.timeZone; // Retrieve the time zone from the recommendation
+
+      // Display local time of the recommended city
+      const options = {
+        timeZone: timeZone,
+        hour12: true,
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric',
+      };
+      const localTime = new Date().toLocaleTimeString('en-US', options);
+      const timeElement = document.createElement('p');
+      timeElement.textContent = `Local Time: ${localTime}`;
+      timeElement.classList.add('localTime');
+
       const imgElement = document.createElement('img');
       imgElement.classList.add('img-place');
       imgElement.src = recommendation.imageUrl;
@@ -76,6 +109,7 @@ document.addEventListener('DOMContentLoaded', function () {
       visitElement.textContent = 'Visit';
       visitElement.classList.add('visit');
 
+      element.appendChild(timeElement);
       element.appendChild(imgElement);
       element.appendChild(nameElement);
       element.appendChild(paraElement);
