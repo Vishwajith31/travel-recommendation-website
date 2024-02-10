@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Bloom</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg">
+      <nav>
+        <div class="logo">
+          <img class="nav-pic" src="./images/airplane.png" />
+          <h1><em>TravelBloom</em></h1>
+        </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <form class="search-form">
+          <input
+            type="text"
+            name="search"
+            placeholder="Enter a destination or keyword"
+            id="place"
+          />
+          <input type="submit" value="Search" id="search" />
+          <input type="reset" value="clear" id="clear" />
+        </form>
+      </nav>
+      <div class="introduction">
+        <h2>Welcome to Travel Bloom</h2>
+        <p>
+          Discover amazing destinations and plan your next adventure with Travel
+          Bloom. We provide personalized travel recommendations and expert
+          advice to make your journey unforgettable.
+        </p>
+        <button class="book">Book now!</button>
+      </div>
+
+      <div class="block">
+        <div class="links">
+          <a href="https://twitter.com/" class="link">
+            <img src="./images/X.png" alt="X" class="nav-icon" />
+          </a>
+          <a href="https://www.facebook.com/" class="link">
+            <img src="./images/facebook.png" alt="facebook" class="nav-icon" />
+          </a>
+          <a href="https://www.instagram.com/" class="link">
+            <img
+              src="./images/instagram.png"
+              alt="Instagram"
+              class="nav-icon"
+            />
+          </a>
+          <a href="https://www.youtube.com/" class="link">
+            <img src="./images/youtube.png" alt="youtube" class="nav-icon" />
+          </a>
+        </div>
+        <div id="result"></div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
